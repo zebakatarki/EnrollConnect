@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Base</title>
+</head>
+<body>
+    <h1>Total Registered Users Are:<%= count %></h1>
+
+    <style>
+        table,th,td{
+            border: 1px solid black;
+        }
+    </style>
+    
+    <table>
+        <tr>
+            <th width="270px">Id</th>
+            <th width="100px">Username</th>
+            <th width="100px">Email</th>
+            <th width="100px">Phone number</th>
+            <th width="400px">Date Of Birth</th>
+            <th width="100px">Password</th>
+        </tr>
+
+            <% for(user of users) { %>
+                <tr>
+                    <td ><%=user.id %></td>
+                    <td ><%=user.username%></td>
+                    <td ><%=user.email%></td>
+                    <td><%=user.phone %></td>
+                    <td ><%=user.birthdate %></td>
+                    <td ><%=user.password %></td>
+                    <!-- <td>
+                    <form method="get" action="/user/<= user.id %>/edit">
+                    <button>Edit Username</button>
+                    </form>
+                    </td>
+                     -->
+                    <td>
+                        <form method="get" action="/userreg/<%= user.id %>/delete">
+                        <button>Delete User</button>
+                        </form>
+                        </td>
+
+                </tr>
+            <%}%>
+        
+    </table>
+
+</body>
+</html>

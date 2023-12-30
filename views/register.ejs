@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register form</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- To remove the spinner from number input -->
+    <style>
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button{
+        -webkit-appearance: none;
+        margin: 0;
+
+    }
+    </style>
+    <style>
+        input::placeholder{
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="form-box">
+        <form method="post" action="/userreg" name="formfill" onsubmit="return validation()">
+        <h2>Register For Zk</h2>
+        <p id="result"></p>
+
+        <div class="input-box">
+            <i class='bx bxs-user'></i>
+            <input type="text" name="username" placeholder="Username" required>
+        </div>
+
+        <div class="input-box">
+            <i class='bx bxs-envelope'></i>
+            <input type="email" name="email" placeholder="Email" required>
+        </div>
+
+        <div class="input-box">
+            <i class='bx bxs-phone'></i>
+            <input type="number" name="phone" placeholder="Phone Number" required>
+        </div>
+
+        <div class="input-box">
+            <!-- <i class='bx bxs-calendar-alt'></i> -->
+            <i class="fa-solid fa-cake-candles"></i>
+            <input type="date" name="bd" required max="2023-12-31" style="color: white;" placeholder="Date Of Birth">
+        </div>
+
+        <div class="input-box">
+            
+            <!-- <ion-icon name="eye" id="eyeicon"></ion-icon>-->
+            <i class="fa-solid fa-eye" id="eyeicon"></i>
+            <!-- <i class="fa-solid fa-eye-slash" id="eyeicon"></i> -->
+            <input type="password" name="password" id="password" placeholder="Password" required>
+        </div>
+
+        <div class="input-box">
+            <i class='bx bxs-lock-alt' ></i>
+            <input type="password" name="cpassword" placeholder="Confirm Password" required>
+        </div>
+
+        <div>
+        <button type="submit" class="btn" onclick="validation()">Register</button>
+        </div>
+
+        </form>
+    </div>
+</div>
+<script>
+    function validation(){
+    if(document.formfill.password.value!==document.formfill.cpassword.value){
+        document.getElementById("result").innerHTML="Password does'nt matched";
+        return false;
+    }
+    else if(document.formfill.password.value.length<7){
+        document.getElementById("result").innerHTML="Password should contain atleast 7-digits";
+        return false;
+    }
+    else if(document.formfill.password.value == document.formfill.cpassword.value){
+        popup.classList.add("open-slide");
+        return false;
+    }
+    else if(document.formfill.bd.value == ""){
+        popup.classList.add("Please Enter Your Birth Date");
+        return false;
+    }
+}
+// var popup=document.getElementById('popup');
+    const showPassword=document.querySelector("#eyeicon");
+    const passwordField=document.querySelector("#password");
+
+    showPassword.addEventListener("click", function(){
+        // this.classList.toggle("fa-eye-slash");<i class="fa-solid fa-eye-slash"></i>
+        this.classList.toggle("fa-eye-slash");
+        const type=passwordField.getAttribute("type") === "password" ? "text" : "password";
+        passwordField.setAttribute("type",type);
+    })
+</script>
+</body>
+</html>

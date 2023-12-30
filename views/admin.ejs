@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <style>
+        table,th,td{
+            border: 1px solid white;
+        }
+        *{
+            background-color: black;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="admin">
+        <!-- <ion-icon name="people-outline" class="adminicon"></ion-icon> -->
+        <!-- <ion-icon name="contact" class="adminicon"></ion-icon> -->
+        <!-- <ion-icon name="person" class="adminicon"></ion-icon> -->
+        <ion-icon name="people-outline" class="adminicon"></ion-icon>
+        <h2 class="heading">Admins</h2><br>
+    <table>
+        <!-- <tr>
+            <th>Admins</th>
+        </tr> -->
+        <% for(res of result) { %>
+            <tr>
+                <td width="500%">
+                    <%=res.name%>
+                </td>
+
+                <td>
+                    <form method="get" action="/admin/<%= res.id %>">
+                    <button class="login"> Login </button>
+                    </form>
+                    
+                </td>
+            </tr>
+        <%}%> 
+    </table>
+</div>
+    
+</body>
+</html>

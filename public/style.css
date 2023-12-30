@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins",sans-serif;
+}
+body{
+    background-color:black;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.form-box{
+    position: relative;
+    width:400px;
+    height: 550px;
+    border:2px solid rgba(255,255,2550.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.form-box h2{
+    color: #fff;
+    text-align: center;
+    font-size: 32px;
+}
+.form-box .input-box{
+    position: relative;
+    margin: 17px 0;
+    width:310px;
+    border-bottom: 2px solid #fff;
+}
+.form-box .input-box input{
+    width: 100%;
+    height:45px;
+    background-color: transparent;
+    border:none;
+    outline: none;
+    padding: 0 20px 0 5px;
+    color: #fff;
+    font-size: 16px;
+}
+i{
+    position: absolute;
+    color: #fff;
+    top:13px;
+    right: 0;
+    font-size: 25px;
+}
+#eyeicon{
+    position: absolute;
+    color: #fff;
+    top:13px;
+    right: 0;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+input::placeholder{
+    color: #fff;
+}
+
+.btn{
+    color: #fff;
+    background: black;
+    border: 2px solid white;
+    width:100%;
+    height: 50px;
+    outline: none;
+    font-size: 17px;
+    cursor: pointer;
+    /* box-shadow: 3px 0 10px rgba(0,0,0,5); */
+}
+#result{
+    color: red;
+    font-weight: 600;
+    position: relative;
+    top:25px;
+}
+.popup{
+    width:600px;
+    background-color: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 40px;
+    /* transform: translate(-50%-50%) scale(0);
+    transition: transform .4s , top .4s;
+    visibility: hidden; */
+    text-align: center;
+    padding: 60px;
+    height:430px;
+    color: black;
+}
+.popup ion-icon{
+    color: green;
+    font-size: 70px;
+}
+.popup button{
+    width: 100px;
+    background: green;
+    padding: 10px 0;
+    margin-top: 30px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 0 0 2px rgba(0,0,0,.1);
+}
+.open-slide{
+    top: 50%;
+    /* transform: translate(-50%,-50%) scale(1); */
+    visibility: visible;
+}
+.error{
+    width:600px;
+    background-color: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    text-align: center;
+    padding: 75px;
+    height:430px;
+    color: black;
+}
+.error ion-icon{
+    color: red;
+    font-size: 60px;
+}
+.errorbtn{
+    width: 100px;
+    background: green;
+    padding: 10px 0;
+    margin-top: 30px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 0 0 2px rgba(0,0,0,.1);
+}
+.admin{
+    width:400px;
+    background-color: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    /* transform: translate(-50%-50%) scale(0);
+    transition: transform .4s , top .4s;
+    visibility: hidden; */
+    text-align: center;
+    padding: 50px;
+    height:300px;
+    color: white;
+}
+.admin ion-icon{
+    color:black;
+    background-color: white;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+.login{
+    height:27px;
+    width:70px;
+    color: white;
+    cursor: pointer;
+    border: 2px solid black;
+}
+.heading{
+    background-color: white;
+    color: black;
+}
+.adminpw{
+    width:460px;
+    background-color: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    text-align: center;
+    padding: 33px;
+    height:300px;
+}
+.admininp{
+    width:250px;
+    height: 25.5px;
+    border: 2px solid black;
+    margin: 5px;
+}
+.adminbtn{
+    height: 29px;
+    width:81px;
+    cursor: pointer;
+    border: 3px solid black;
+    background-color: white;
+    font-size: 19px;
+    /* font-weight: bold; */
+    margin-top: 9px;
+}
+.adminpw ion-icon{
+    color:black;
+    background-color: white;
+    font-size: 60px;
+    margin-bottom: 5px;
+}
+.welcome{
+    width:750px;
+    background-color:black;
+    border-radius: 6px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 40px;
+    /* transform: translate(-50%-50%) scale(0);
+    transition: transform .4s , top .4s;
+    visibility: hidden; */
+    text-align: center;
+    padding: 50px;
+    height:300px;
+    color: white;
+}
+#registerbtn{
+    width: 200px;
+    height: 45px;
+    background: green;
+    padding: 10px 0;
+    margin-top: 30px;
+    border: 2px solid green;
+    outline: none;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 0 0 2px rgba(0,0,0,.1);
+}
+.adminbutton{
+    width: 200px;
+    background: green;
+    padding: 10px 0;
+    margin-top: 30px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 0 0 2px rgba(0,0,0,.1);
+}
+.newadmininp{
+    width:460px;
+    background-color: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    text-align: center;
+    padding: 33px;
+    height:300px;
+}
+.newinp{
+    width:350px;
+    height: 25.5px;
+    border: 2px solid black;
+    margin: 9px;
+}
+.newadmininp ion-icon{
+    color:black;
+    background-color: white;
+    font-size: 60px;
+    margin-bottom: 5px;
+}
+.newadmininp button{
+    height: 31px;
+    width:81px;
+    cursor: pointer;
+    border: 2px solid black;
+    background-color: white;
+    font-size: 19px;
+    /* font-weight: bold; */
+    margin-top: 9px;
+    cursor: pointer;
+}
+.welcome ion-icon{
+    font-size: 20px;
+}
+.welbuttons{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 60px;
+}
+.choice{
+    width:460px;
+    background-color: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    text-align: center;
+    padding: 33px;
+    height:300px;
+}
+.choice ion-icon{
+    color:black;
+    background-color: white;
+    font-size: 60px;
+    margin-bottom: 5px;
+}
+.secretk{
+    width:500px;
+    background-color: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    text-align: center;
+    padding: 33px;
+    height:180px;
+}
+.secretk h1{
+    color: black;
+    display: inline;
+}
+.secretk ion-icon{
+    color: black;
+    font-size: 30px;
+}
+.secretk input{
+    color: black;
+    width: 330px;
+    height: 30px;
+    border: 2px solid black;
+}
+.secretk button{
+    color: black;
+    width: 80px;
+    height: 30px;
+    border: 2px solid black;
+    cursor: pointer;
+    background-color: white;
+}
+.error1{
+    width:500px;
+    background-color: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    text-align: center;
+    padding: 50px;
+    height:280px;
+    color: black;
+}
+.error1 ion-icon{
+    color: red;
+    font-size: 60px;
+}
+.errorbtn1{
+    width: 100px;
+    background: green;
+    padding: 10px 0;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 0 0 2px rgba(0,0,0,.1);
+}

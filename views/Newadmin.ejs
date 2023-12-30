@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Admin</title>
+    <link rel="stylesheet" href="/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        <style>
+            input::placeholder{
+                color: black;
+                font-size: 16px;
+            }
+        </style>
+</head>
+<body>
+    <div class="newadmininp">
+    <form method="post" action="/Newadmin">
+        <ion-icon name="person-add-outline"></ion-icon><br>
+        <input type="text" placeholder="Enter Name" name="name" class="newinp" required><br>
+        <input type="email" placeholder="Enter Email" name="email" class="newinp" required><br>
+        <input type="password" placeholder="Enter Password" name="password" class="newinp" required><br>
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+</body>
+</html>
