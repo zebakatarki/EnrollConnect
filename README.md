@@ -1,4 +1,4 @@
-# ZK
+# EnrollConnect
 It is web application which includes a MySQL database implemented with SQL. The project consists of two modules: user and admin.
 
 In the user module, individuals can register through a form with various functionalities. The module enforces mandatory field completion, unique usernames and email addresses, a minimum password length of 7 characters, and ensures that the password and confirm password fields match. If a user attempts to register with a username or email already in the database, a message will be displayed indicating 'This user has already been registered!'.
